@@ -1,13 +1,20 @@
-const { multiplicar } = require("./calculadora");
+const {  somar, subtrair } = require("./calculadora");
 
 /* --------- SOMA ------------- */
-/* Somar dois números positivos */
-/* Somar com números negativos  */
+describe("somar", () => {
+  test("soma dois números e ver se o resultado está correto", () => {
+    expect(somar(2, 3)).toBe(5);
+  });
+  });
 
 
 /* ------ SUBTRAIR ------ */
-/* Subitrair dois números */
 
+describe("subtrair", () => {
+  test("subtrai dois números e ver se o resultado está correto", () => {
+    expect(subtrair(10, 5)).toBe(5);
+  });
+});
 
 describe("multiplicar", () => {
   test("multiplica dois números e ver se o resultado está correto", () => {
@@ -19,12 +26,12 @@ describe("multiplicar", () => {
   });
 });
 
-// describe("dividir", () => {
-//   test("divide dois números", () => {
-//     expect(dividir(10, 2)).toBe(5);
-//   });
+describe("dividir", () => {
+  test("divide dois números", () => {
+    expect(dividir(10, 2)).toBe(5);
+  });
 
-//   test("lança erro ao dividir por zero", () => {
-//     expect(() => dividir(10, 0)).toThrow("Divisão por zero não é permitida");
-//   });
-// });
+  test("lança erro ao dividir por zero", () => {
+    expect(() => dividir(10, 0)).toThrow("Divisão por zero não é permitida");
+  });
+});
