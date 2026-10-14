@@ -1,18 +1,28 @@
-const {  somar, subtrair } = require("./calculadora");
+const {  somar, subtrair, multiplicar, dividir } = require("./calculador");
 
 /* --------- SOMA ------------- */
 describe("somar", () => {
   test("soma dois números e ver se o resultado está correto", () => {
     expect(somar(2, 3)).toBe(5);
   });
-  });
+});
 
+describe("somar", () => {
+  test("soma dois números e ver se o resultado está correto", () => {
+    expect(somar(-2, -3)).toBe(-5);
+  });
+});
 
 /* ------ SUBTRAIR ------ */
-
 describe("subtrair", () => {
   test("subtrai dois números e ver se o resultado está correto", () => {
     expect(subtrair(10, 5)).toBe(5);
+  });
+});
+
+describe("subtrair", () => {
+  test("subtrai dois números e ver se o resultado está correto", () => {
+    expect(subtrair(-10, -5)).toBe(-5);
   });
 });
 
